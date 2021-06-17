@@ -41,8 +41,8 @@
         // example:
         // 640 y axis is closest to bottom 900 width , 700 height//
       
-        createPlatform(200,600,0.5,850,)
-        createPlatform(400,580,0.6);
+        createPlatform(200,585,0.4,850,)
+        createPlatform(500,550,0.3,850);
         createPlatform(700,530,0.6);
         createPlatform(385,430,0.4);
         createPlatform(90,385,0.6);
