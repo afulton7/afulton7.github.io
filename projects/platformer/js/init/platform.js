@@ -28,6 +28,8 @@
 
         ////////////////////////////////////////////////////////////////////////
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
+
+        
         
         /*
          * ground : here, we create a floor. Given the width of of the platform 
@@ -37,8 +39,18 @@
         createPlatform(0, game.world.height - 32, 3, 2);    // DO NOT DELETE
 
         // example:
-        createPlatform(400, 250);
-        createPlatform(170, 460, 0.5);
+        // 640 y axis is closest to bottom 900 width , 700 height//
+      
+        createPlatform(200,600,0.5,850,)
+        createPlatform(400,580,0.6);
+        createPlatform(700,530,0.6);
+        createPlatform(385,430,0.4);
+        createPlatform(90,385,0.6);
+        createPlatform(40,290,0.3);
+        createPlatform(390,280,0.5);
+        createPlatform(700,198,0.6);
+        
+        
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
