@@ -6,9 +6,9 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 70px;
-			height: 70px;
-			background-color: teal;
+			width: 2400px;
+			height: 2400px;
+			background-image: url("https://i.pinimg.com/originals/65/a1/d1/65a1d10d65a42d7c787202175ea14b5d.png");
 			font-size: 300%;
 			text-align: center;
 			display: block;
@@ -18,6 +18,7 @@
 		}
 		.board{
 			height: 100vh;
+            background-image:url("https://ae01.alicdn.com/kf/HTB1ARieQpXXXXX9aFXXq6xXFXXX3/Mini-RGB-Laser-Light-Show-Projector-Portable-Home-Party-Disco-Lights-Luces-Discoteca-Lumiere-Lamp-DJ.jpg") ;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -63,6 +64,7 @@
 			// TODO 2 - Variable declarations 
 			 var positionX = 0
              var points = 0
+			 var speed = 10
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -70,10 +72,16 @@
 			turn it around! 
 			*/
 			function update() {
-				positionX = positionX + 10
+				positionX = positionX + speed;
 				moveBoxTo(positionX);
+				// speed = -speed, bouncing the ball back.
+				if (positionX  > boardWidth) {
+                  speed = -speed;
+				} 
+                if (positionX < 0 ) {
+                 speed= -speed;
+				} 
 				
-
 			};
 
 			/* 
@@ -84,7 +92,14 @@
 			function handleBoxClick() {
 				positionX = 0
                 points+=1
-				
+				speed+=3
+			    
+				if (speed >= 0) {
+                 speed +=3;
+ 				}
+				 else if (speed < 0) {
+                speed -=3;
+				 } 
 				//  your code to increase the points variable by 1
 				changeBoxText(points);
 
