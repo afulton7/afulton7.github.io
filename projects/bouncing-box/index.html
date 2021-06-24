@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-image: url("blob:chrome-untrusted://media-app/bfc776e3-35ff-4a9c-ac3a-0682ca0e3b93");
+			background-image: url("blob:chrome-untrusted://media-app/88ed06f8-2266-432f-948a-a51406e7520b");
 			font-size: 300%;
 			text-align: center;
 			display: block;
@@ -65,7 +65,7 @@
 			 var positionX = 0
              var points = 0
 			 var speed = 10
-			 var myMusic;
+		
  			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
@@ -84,20 +84,6 @@
 				
 			};
             
-			//  This function includes background music
-            
-          function music() {
-			myMusic = new sound("https://youtu.be/QGBuuhzjt1w");
-            myMusic.play();
-		  }
-        
-		  music();
-
-
-
-
-
-
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
 			it should increase the points total, increase the speed, and move the box to
@@ -118,5 +104,6 @@
 			};
 		})();
 	</script>
+	<audio> src = "https://youtu.be/QGBuuhzjt1w"  </audio>
 </body>
 </html>
