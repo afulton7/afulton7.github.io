@@ -6,9 +6,9 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 2400px;
-			height: 2400px;
-			background-image: url("https://i.pinimg.com/originals/65/a1/d1/65a1d10d65a42d7c787202175ea14b5d.png");
+			width: 70px;
+			height: 70px;
+			background-image: url("blob:chrome-untrusted://media-app/bfc776e3-35ff-4a9c-ac3a-0682ca0e3b93");
 			font-size: 300%;
 			text-align: center;
 			display: block;
@@ -65,8 +65,8 @@
 			 var positionX = 0
              var points = 0
 			 var speed = 10
-			
-			/* 
+			 var myMusic;
+ 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
@@ -75,14 +75,28 @@
 				positionX = positionX + speed;
 				moveBoxTo(positionX);
 				// speed = -speed, bouncing the ball back.
-				if (positionX  > boardWidth) {
+		    if (positionX  > boardWidth) {
                   speed = -speed;
 				} 
-                if (positionX < 0 ) {
+            if (positionX < 0 ) {
                  speed= -speed;
 				} 
 				
 			};
+            
+			//  This function includes background music
+            
+          function music() {
+			myMusic = new sound("https://youtu.be/QGBuuhzjt1w");
+            myMusic.play();
+		  }
+        
+		  music();
+
+
+
+
+
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
@@ -92,12 +106,10 @@
 			function handleBoxClick() {
 				positionX = 0
                 points+=1
-				speed+=3
-			    
-				if (speed >= 0) {
+			if (speed >= 0) {
                  speed +=3;
- 				}
-				 else if (speed < 0) {
+ 	     		}
+		    else if (speed < 0) {
                 speed -=3;
 				 } 
 				//  your code to increase the points variable by 1
