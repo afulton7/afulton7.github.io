@@ -286,7 +286,7 @@
 			
 			// first draw the circle's border - don't use stroke //
 			circle = draw.circle(props.radius+borderThickness, borderColor, null, null, null, null, circle);
-			draw.circle(props.radius, props.color, null, null, null, null, circle);
+			draw.circle(props.radius, 'gold', null, null, null, null, circle);
 			circle.x = props.x;
 			circle.y = props.y;
 			
