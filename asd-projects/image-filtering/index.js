@@ -2,9 +2,12 @@
 // as soon as the page loads and is where you should call your functions.
 $(document).ready(function(){
     const $display = $('#display');
-
+    applyFilter();
     // TODO: Call your apply function(s) here
 
+    function applyFilter(){
+
+}
 
 
 
